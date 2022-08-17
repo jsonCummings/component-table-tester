@@ -1,23 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
+import {ItemTable} from 'item-table-jsoncummings';
 
 function App() {
+  const filesArray = [
+    { name: 'vishanti.exe', device: 'Strange', path: '\\Device\\SanctumSantorum\\Floor4\\vishanti.exe', status: 'scheduled' },
+    { name: 'webShooter.exe', device: 'SpiderMan', path: '\\Device\\Queens\\Thiwp\\webshooter.exe', status: 'available' },
+    ];
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <ItemTable itemsArray={filesArray}/>
     </div>
   );
 }
